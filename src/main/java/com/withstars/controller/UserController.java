@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -217,7 +218,11 @@ public class UserController {
         Long date=new Date().getTime();
         String newFileName=date+"-"+uid+"."+suffix;
         String absolutePath=session.getServletContext().getRealPath("/static/img/avatar")+"/"+newFileName;
-        String relativePath="/img/avatar"+"/"+newFileName;
+        //调试的时候可以写绝对路径对应本机工程路径(或者修改tomcat部署)
+        //String absolutePath = "D:\study\管理信息系统\Genesis-master\src\main\webapp\static\img\avatar"
+        //由于调试的时候会重新部署，正式发布的时候不会，所以可以不用更改tomcat/conf 的热部署
+        String relativePath="/img/avatar"+"/"+newFileName;  //头像上传后保存到tomcat/root底下
+
         User newUser=new User();
         newUser.setAvatar(relativePath);
         newUser.setId(uid);
@@ -243,44 +248,4 @@ public class UserController {
         mv.addObject("hotestTopics",hotestTopics);
         return mv;
     }
-
-    @RequestMapping(value = "/settings/newName",method = RequestMethod.POST)
-    public void updateUserName(HttpServletRequest request, HttpServletResponse response){
-        HttpSession session=request.getSession();
-        Integer uid=(Integer) session.getAttribute("userId");
-        User user=userService.getUserById(uid);
-        System.out.println(user.getId());
-
-        user.setUsername((String) session.getAttribute("newName"));
-        System.out.println(session.getAttribute("newName"));
-        System.out.println(user.getUsername());
-
-        boolean ifSucc=userService.updateUser(user);
-        System.out.print(ifSucc);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("settings");
-        try {
-            dispatcher.forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    @RequestMapping(value = "/settings/newEmail",method = RequestMethod.GET)
-    public String updateUserEmail(HttpServletRequest request, HttpSession session){
-
-        Integer uid=(Integer) session.getAttribute("userId");
-        User user=userService.getUserById(uid);
-        System.out.println(user.getId());
-
-        user.setEmail(request.getParameter("email"));
-        System.out.println(user.getEmail());
-
-        boolean ifSucc=userService.updateUser(user);
-        System.out.print(ifSucc);
-        return "redirect:/settings";
-    }
-
 }

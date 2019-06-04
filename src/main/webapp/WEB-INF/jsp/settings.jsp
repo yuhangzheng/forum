@@ -33,31 +33,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <form action="/settings/newName" method="post" id="newNameForm" class="form-horizontal" role="form" >
-                            <label class="col-sm-2 control-label">用户名</label>
-                            <div class="col-sm-4">
-                                <p class="form-control-static">${user.username}</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" id="newName" name="newName" placeholder="新用户名">
-                            </div>
-                            <% session.setAttribute("newName",request.getParameter("newName"));%>
-                            <%System.out.println(request.getParameter("newName"));%>
-                            <div class="col-sm-2">
-                                <input type="submit" class="btn btn-default" id="submit">
-                            </div>
-                        </form>
+                        <label class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">${user.username}</p>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-10">
                             <p class="form-control-static">${user.email}</p>
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="新邮箱">
-                        </div>
-                        <div class="col-sm-2">
-                            <a class="btn btn-default" href="/settings/newEmail" role="button">更换邮箱</a>
                         </div>
                     </div>
                     <div class="form-group">
@@ -72,7 +56,6 @@
                             <p class="form-control-static">${user.credit}</p>
                         </div>
                     </div>
-
                 </form>
 
         </div>

@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 /**
@@ -29,8 +30,9 @@ public class ReplyController {
      * 添加评论
      */
     @RequestMapping(value = "/reply/add",method = RequestMethod.POST)
-    public ModelAndView addReply(HttpServletRequest request, HttpSession session){
+    public ModelAndView addReply(HttpServletRequest request, HttpSession session) throws UnsupportedEncodingException {
         //处理参数
+        request.setCharacterEncoding("utf-8");
         Integer topicId=Integer.parseInt(request.getParameter("topicId"));
         Integer replyUserId=Integer.parseInt(request.getParameter("replyUserId"));
         String content=request.getParameter("content");
