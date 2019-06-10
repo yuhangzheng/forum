@@ -1,6 +1,6 @@
 package com.internshipElves.service;
 
-import com.internshipElves.domain.User;
+import com.internshipElves.entity.User;
 
 public interface UserService {
 

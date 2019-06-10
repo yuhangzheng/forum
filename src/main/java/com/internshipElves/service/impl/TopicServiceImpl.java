@@ -1,7 +1,7 @@
 package com.internshipElves.service.impl;
 
 import com.internshipElves.dao.TopicMapper;
-import com.internshipElves.domain.Topic;
+import com.internshipElves.entity.Topic;
 import com.internshipElves.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

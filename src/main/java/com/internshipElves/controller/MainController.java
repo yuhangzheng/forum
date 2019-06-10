@@ -1,6 +1,6 @@
 package com.internshipElves.controller;
 
-import com.internshipElves.domain.Tab;
+import com.internshipElves.entity.Tab;
 import com.internshipElves.service.impl.ReplyServiceImpl;
 import com.internshipElves.service.impl.TabServiceImpl;
 import com.internshipElves.service.impl.TopicServiceImpl;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.jws.WebParam;
 import java.util.List;
 
 /**

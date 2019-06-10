@@ -1,6 +1,6 @@
 package com.internshipElves.dao;
 
-import com.internshipElves.domain.LoginLog;
+import com.internshipElves.entity.LoginLog;
 
 public interface LoginLogMapper {
     int deleteByPrimaryKey(Long id);

@@ -1,8 +1,8 @@
 package com.internshipElves.controller;
 
-import com.internshipElves.domain.LoginLog;
-import com.internshipElves.domain.Topic;
-import com.internshipElves.domain.User;
+import com.internshipElves.entity.LoginLog;
+import com.internshipElves.entity.Topic;
+import com.internshipElves.entity.User;
 import com.internshipElves.service.impl.LoginLogServiceImpl;
 import com.internshipElves.service.impl.TopicServiceImpl;
 import com.internshipElves.service.impl.UserServiceImpl;
@@ -15,13 +15,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
 /**

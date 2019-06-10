@@ -1,6 +1,6 @@
 package com.internshipElves.service;
 
-import com.internshipElves.domain.LoginLog;
+import com.internshipElves.entity.LoginLog;
 
 public interface LoginLogService {
 

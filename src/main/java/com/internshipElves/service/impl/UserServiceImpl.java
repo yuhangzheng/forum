@@ -1,7 +1,7 @@
 package com.internshipElves.service.impl;
 
 import com.internshipElves.dao.UserMapper;
-import com.internshipElves.domain.User;
+import com.internshipElves.entity.User;
 import com.internshipElves.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

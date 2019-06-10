@@ -1,6 +1,6 @@
 package com.internshipElves.dao;
 
-import com.internshipElves.domain.Tab;
+import com.internshipElves.entity.Tab;
 
 import java.util.List;
 

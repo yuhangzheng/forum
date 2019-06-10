@@ -1,6 +1,6 @@
 package com.internshipElves.service;
 
-import com.internshipElves.domain.Reply;
+import com.internshipElves.entity.Reply;
 
 import java.util.List;
 

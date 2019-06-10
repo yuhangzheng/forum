@@ -1,7 +1,7 @@
 package com.internshipElves.service.impl;
 
 import com.internshipElves.dao.LoginLogMapper;
-import com.internshipElves.domain.LoginLog;
+import com.internshipElves.entity.LoginLog;
 import com.internshipElves.service.LoginLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

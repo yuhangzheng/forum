@@ -1,6 +1,5 @@
-package com.internshipElves.domain;
+package com.internshipElves.entity;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**

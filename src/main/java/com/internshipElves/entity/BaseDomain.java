@@ -1,4 +1,4 @@
-package com.internshipElves.domain;
+package com.internshipElves.entity;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 

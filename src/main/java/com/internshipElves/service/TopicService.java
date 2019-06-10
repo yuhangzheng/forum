@@ -1,6 +1,6 @@
 package com.internshipElves.service;
 
-import com.internshipElves.domain.Topic;
+import com.internshipElves.entity.Topic;
 
 import java.util.List;
 

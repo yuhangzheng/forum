@@ -1,6 +1,6 @@
 package com.internshipElves.dao;
 
-import com.internshipElves.domain.User;
+import com.internshipElves.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {

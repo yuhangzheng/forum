@@ -1,7 +1,7 @@
 package com.internshipElves.service.impl;
 
 import com.internshipElves.dao.ReplyMapper;
-import com.internshipElves.domain.Reply;
+import com.internshipElves.entity.Reply;
 import com.internshipElves.service.ReplyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
